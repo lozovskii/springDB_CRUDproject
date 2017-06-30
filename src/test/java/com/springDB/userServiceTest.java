@@ -3,7 +3,6 @@ package com.springDB;
 import com.springDB.config.AppConfig;
 import com.springDB.model.User;
 import com.springDB.service.UserService;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,14 +25,12 @@ public class userServiceTest {
     private UserService userService;
 
     @Test
-    @Ignore
     public void shouldAddToDB(){
         User Addeduser = new User("normAddToDBTest@gmail.com", "Ivan", "kolo96");
         userService.saveUser(Addeduser);
     }
 
     @Test
-    @Ignore
     public void shouldDeleteFromDB(){
         User deletedUser = new User("mail.mail@gmail.com", "TestForDeleting", "testpass");
         userService.saveUser(deletedUser);
@@ -42,7 +39,6 @@ public class userServiceTest {
     }
 
     @Test
-    @Ignore
     public void shouldLoadFromDB(){
 
         User loadUser = userService.loadUser(15);
@@ -53,7 +49,6 @@ public class userServiceTest {
     }
 
     @Test
-    @Ignore
     public void shouldLoadAllSelectsFromDB(){
 
         List listAll = userService.loadAll();
@@ -64,7 +59,6 @@ public class userServiceTest {
     }
 
     @Test
-    @Ignore
     public void shouldLoadByProp(){
 
         List listByProp = userService.loadAllSortedByProp("name");
