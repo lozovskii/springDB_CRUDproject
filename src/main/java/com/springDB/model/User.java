@@ -10,6 +10,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Basic
     @Column(name = "email")
     private String email;
 
@@ -69,5 +70,4 @@ public class User {
                 ", password='" + password + '\'' +
                 '}';
     }
-
 }
